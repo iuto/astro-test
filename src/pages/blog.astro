@@ -1,0 +1,50 @@
+---
+import Header from '../layouts/Header.astro';
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>iuto.work</title>
+  <html lang="ja">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon.ico">
+  <link href="/dist/output.css" rel="stylesheet">
+  <meta name="description" content="いうとのポートフォリオサイトです。">
+  <meta property="og:image" content="https://www.iuto.work/images/ogp.webp" />
+</head>
+<body class="justify-center 2xl:w-1/2 sm:w-5/6 mx-auto mb-20 dark:bg-gray-800 p-4">
+
+    <Header active="blog" />
+
+    <div class="mt-10 flex flex-col items-center mx-auto max-w-2xl dark:text-gray-200">
+        <a href="/blog/future-school" class="block w-full flex flex-col items-center">
+            <div id="toast-default" class="mt-5 flex items-center w-full max-w-xl p-6 text-gray-500 bg-white rounded-lg shadow-md rounded-lg dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700" role="alert">
+                <div class="inline-flex items-center justify-center flex-shrink-0 w-10 h-10 text-blue-500 rounded-lg">
+                    <img src="/images/school.webp">
+                </div>
+                <div class="ml-3 font-bold text-base dark:text-gray-200">今後の学校教育について<br><span class="font-normal text-sm">2023.10.21</span></div>
+            </div>
+        </a>
+        <a href="/blog/sogogata-navi" class="block w-full flex flex-col items-center">
+            <div id="toast-default" class="mt-5 flex items-center w-full max-w-xl p-6 text-gray-500 bg-white rounded-lg shadow-md rounded-lg dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700" role="alert">
+                <div class="inline-flex items-center justify-center flex-shrink-0 w-10 h-10 text-blue-500 rounded-lg">
+                    <img src="/images/search.webp">
+                </div>
+                <div class="ml-3 font-bold text-base dark:text-gray-200">総合型選抜ナビをリリースしました<br><span class="font-normal text-sm">2023.09.21</span></div>
+            </div>
+        </a>
+        <a href="/blog/create-portfolio" class="block w-full flex flex-col items-center">
+            <div id="toast-default" class="mt-5 flex items-center w-full max-w-xl p-6 text-gray-500 bg-white rounded-lg shadow-md rounded-lg dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700" role="alert">
+                <div class="inline-flex items-center justify-center flex-shrink-0 w-10 h-10 text-blue-500 rounded-lg">
+                    <img src="/images/pc.webp">
+                </div>
+                <div class="ml-3 font-bold text-base dark:text-gray-200">ポートフォリオサイトを作成しました<br><span class="font-normal text-sm">2023.09.11</span></div>
+            </div>
+        </a>
+    </div>
+    
+      
+</body>
+</html>
