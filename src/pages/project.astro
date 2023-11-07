@@ -13,6 +13,24 @@ import Header from '../layouts/Header.astro';
   <link href="/dist/output.css" rel="stylesheet">
   <meta name="description" content="いうとのポートフォリオサイトです。">
   <meta property="og:image" content="https://www.iuto.work/images/ogp.webp" />
+
+  <style>
+    :global(.hover-box:hover) {
+      animation: smooth-move 0.5s ease-in-out forwards;
+    }
+
+    :global(@keyframes smooth-move) {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 
 <body class="justify-center 2xl:w-1/2 sm:w-5/6 mx-auto mb-20 dark:bg-gray-800 p-4">
