@@ -1,0 +1,123 @@
+---
+import Header from '../Layouts/Header.astro';
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>iuto.work</title>
+  <html lang="ja">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon.ico">
+  <link href="/dist/output.css" rel="stylesheet">
+  <meta name="description" content="いうとのポートフォリオサイトです。">
+  <meta property="og:image" content="https://www.iuto.work/images/ogp.webp" />
+  <style>
+
+
+    .hover-box:hover {
+      animation: smooth-move 0.5s ease-in-out forwards;
+    }
+
+    @keyframes smooth-move {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body class="justify-center 2xl:w-1/2 sm:w-5/6 mx-auto mb-20 dark:bg-gray-800 p-4">
+
+    <Header active="project" />
+
+<div class="grid gap-4 mt-20 grid-cols-1 md:grid-cols-2">
+    <a href="https://ao-navi.knocklearn.com/">
+        <div class="group max-w-sm rounded-lg overflow-hidden shadow-md mx-auto hover-box md:mb-10 dark:border-gray-700 dark:bg-gray-500 dark:text-white" data-category="knocklearn">
+            <img class="rounded-t-lg" src="/images/sogogata.webp" alt="Sunset in the mountains">
+            <div class="px-6 py-4 rounded-lg">
+                <div class="font-bold text-xl mb-2">総合型選抜ナビ</div>
+                <p class="text-gray-700 text-base">
+                    自分の条件に合った総合型選抜を見つけることが難しいと感じており、長期インターン先の株式会社ノックラーンにて、その解決策となるサービスの考案・開発に行いました。<br><br>総合選抜型ナビでは、大学で学びたいことや場所、英検の資格、併願の有無、評定を入力するだけで、自分に合った総合型選抜のある大学・学部学科を簡単に絞り込むことができます。
+                </p>
+            </div>
+            <div class="px-6 pb-2">
+                <div class="flex justify-center items-center text-gray-900 bg-white border border-gray-300 focus:outline-none font-medium rounded-lg text-sm px-3 py-1 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600">
+                    <div class="flex items-center">
+                        <img src="/images/book.webp" class="w-4 h-4">
+                        <span class="ml-2">KnockLearn</span>
+                    </div>
+                </div>  
+            </div>        
+        </div> 
+    </a>     
+
+    <a href="https://web.archive.org/web/20230319074050/https://www.ideactive.jp/news/detail?id=20230217-1">
+        <div class="group max-w-sm rounded-lg overflow-hidden shadow-md mx-auto hover-box md:mb-10 dark:border-gray-700 dark:bg-gray-500 dark:text-white" data-category="others">
+            <img class="w-full rounded-t-lg " src="/images/ijp.webp" alt="Sunset in the mountains">
+            <div class="px-6 py-4 rounded-lg">
+              <div class="font-bold text-xl mb-2">IDEA CREATION WORKSHOP IN MINECRAFT</div>
+              <p class="text-gray-700 text-base">
+                Minecraftを用いて、社会問題について考える小学生向けのイベントです。<br><br>参加者は数名程度のグループに分かれ、そのグループのサポーターを担当しました。<br><br>1週目は品川のMicrosoftオフィスで、2週目にはオンラインで開催されました。
+              </p>
+            </div>
+            <div class="px-6 pb-2">
+                <div class="flex justify-center items-center text-gray-900 bg-white border border-gray-300 focus:outline-none font-medium rounded-lg text-sm px-3 py-1 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600">
+                    <div class="flex items-center">
+                    <img src="/images/thinking.webp" class="w-4 h-4">
+                    <span class="ml-2">Others</span>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </a>
+
+    <a href="https://studia.tokyo">
+        <div class="group max-w-sm rounded-lg overflow-hidden shadow-md mx-auto hover-box md:mb-10 dark:border-gray-700 dark:bg-gray-500 dark:text-white" data-category="personal">
+            <img class="w-full rounded-t-lg" src="/images/studia.webp" alt="Sunset in the mountains">
+            <div class="px-6 py-4 rounded-lg">
+            <div class="font-bold text-xl mb-2">学生に焦点を当てたメディア「StuDia」</div>
+            <p class="text-gray-700 text-base">
+                様々な活動をしている学生は多いものの、そういった学生が世間に知られていないと思い、取材して記事にするメディアを運営していました。<br><br>現在は以前のようには活動していないものの、このメディアを通して様々な学生と出会うことができ、良かったと思っています。
+            </p>
+            </div>
+            <div class="px-6 pb-2">
+                <div class="flex justify-center items-center text-gray-900 bg-white border border-gray-300 focus:outline-none font-medium rounded-lg text-sm px-3 py-1 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600">
+                    <div class="flex items-center">
+                    <img src="/images/pc.webp" class="w-4 h-4">
+                    <span class="ml-2">Personal</span>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </a>
+
+    <a href="https://bunsho-bunkatsu.herokuapp.com/">
+        <div class="group max-w-sm rounded-lg overflow-hidden shadow-md mx-auto hover-box md:mb-10 dark:border-gray-700 dark:bg-gray-500 dark:text-white" data-category="personal">
+            <img class="w-full rounded-t-lg" src="/images/bunsho-bunkatsu.webp" alt="Sunset in the mountains">
+            <div class="px-6 py-4 rounded-lg">
+              <div class="font-bold text-xl mb-2">文章分割ツール</div>
+              <p class="text-gray-700 text-base">
+                ChatGPTで一度に送れる文字数には制限があり、長い文章を要約する際などに手動で分けることが面倒だと感じていたので、文章分割ツールを作成しました。<br><br>指定した文字数で分割するだけではなく、読点で区切ったり、URLを削除・抽出することもできます。
+              </p>
+            </div>
+            <div class="px-6 pb-2">
+                <div class="flex justify-center items-center text-gray-900 bg-white border border-gray-300 focus:outline-none font-medium rounded-lg text-sm px-3 py-1 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600">
+                    <div class="flex items-center">
+                    <img src="/images/pc.webp" class="w-4 h-4">
+                    <span class="ml-2">Personal</span>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </a>
+</div>
+</body>
+</html>
