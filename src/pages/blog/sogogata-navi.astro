@@ -1,0 +1,64 @@
+---
+import Header from '../../Layouts/Header.astro';
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>総合型選抜ナビをリリースしました｜iuto.work</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon.ico">
+  <link href="/dist/output.css" rel="stylesheet">
+  <meta property="og:title" content="総合型選抜ナビをリリースしました｜iuto.work">
+  <meta property="og:image" content="https://www.iuto.work/images/ogp.webp" />
+</head>
+<body class="justify-center 2xl:w-1/2 sm:w-5/6 mx-auto mb-20 dark:bg-gray-800 p-4">
+    <Header active="blog" />
+
+    <div class="flex flex-col items-center mx-auto max-w-2xl dark:text-gray-200 md:max-w-full">
+        <div class="mt-10 inline-flex items-center justify-center flex-shrink-0 h-20 w-20 text-blue-500" style="font-size: 2em;">
+            <img src="/images/search.webp">
+        </div>
+        <div class="flex flex-col mt-10 items-center">
+            <h2 class="text-2xl font-bold dark:text-white self-stretch">総合型選抜ナビをリリースしました</h2>
+            <time class="mt-2 text-gray-500 flex justify-center items-center">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="mr-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path>
+                </svg>
+                2023.09.21
+            </time>
+        </div>
+    </div> 
+    
+    <p class="mb-4 mt-10 text-lg text-gray-900 dark:text-gray-200 text-left">長期インターン中の株式会社ノックラーンにて、総合型選抜を考えている高校生に向けた新たなサービス「<a href="https://ao-navi.knocklearn.com/" class="font-bold underline dark:text-blue-500 hover:no-underline">総合選抜型ナビ by KnockLearn α版</a>」をリリースしました。リリースにあたって、企画立案からサービス開発までを担当しています。</p>
+    <div class="flex justify-center mt-4">
+        <button type="button" class="text-gray-900 bg-white border border-gray-200 hover:bg-gray-100 hover:text-gray-900 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 font-bold rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            <a link href="https://ao-navi.knocklearn.com/">サービスを試してみる</a>
+            <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+            </svg>
+        </button>
+    </div>    
+    <h2 class="text-xl font-bold dark:text-white mt-10 text-center">開発に至った経緯</h2>
+    <p class="mb-4 mt-10 text-lg text-gray-900 dark:text-gray-200 text-left">勉強以外に取り組んでいることがある高校生は、総合型選抜での受験を検討することも多いです。しかし総合型選抜に関する情報は限られており、特に「自分の条件に合った総合型選抜を実施している大学が分からない。」という課題がありました。<br><br>
+    そこで診断メーカーのような形で、大学で学びたいことや希望するエリア、英検の資格、評定、併願できるかどうかを選択し、自分に合った選択肢を見つけられるサービスを開発することにしました。<br><br>
+    </p>
+    <h2 class="text-xl font-bold dark:text-white mt-10 text-center">サービスの詳細</h2>
+    <p class="mb-4 mt-10 text-lg text-gray-900 dark:text-gray-200 text-left">主に、質問に答えて大学を絞り込むページと、大学名で検索するページの2つがあります。<br><br>
+    質問に答えて大学を絞り込むページでは、5つの質問に回答していきます。上の項目一覧を押したり、画面下のほうにある「1つ前に戻る」を押すことにより、以前の質問に戻れるようにしました。</p>
+    <img src="/images/02-01.webp" alt="screenshots01" class="shadow-md rounded-lg w-40">
+    <p class="mb-4 mt-10 text-lg text-gray-900 dark:text-gray-200 text-left">質問に答え終わると結果が表示され、気になった選択肢があれば「公式サイト」と書かれたボタンを押すことで、入試要項を確認できるようにしています。<br><br></p>
+    <img src="/images/02-02.webp" alt="screenshots01" class="shadow-md rounded-lg w-40">
+    <p class="mb-4 mt-10 text-lg text-gray-900 dark:text-gray-200 text-left">大学名で検索するページでは、検索欄に大学名を入力することにより、このサービスで掲載している難関私立大学・国公立大学78校が表示されます。また「全て」「締切前」「締切過ぎ」の3つの絞り込み機能があり、今からでも間に合う大学を調べることも可能です。</p>
+    <img src="/images/02-03.webp" alt="screenshots01" class="shadow-md rounded-lg w-40">
+    </p>
+    <h2 class="text-xl font-bold dark:text-white mt-10 text-center">こだわったポイント</h2>
+    <p class="mb-4 mt-10 text-lg text-gray-900 dark:text-gray-200 text-left">高校生を対象にしたサービスなのでスマホで使いやすいように、スクロールして質問に答えていく形式ではなく、各質問ごとにページを変えていく形式にしました。これにより、簡単に操作できるようになったと思っています。<br><br>
+    また共通テストが必須ではなく、学力を重視しないような総合型選抜だけを掲載することで、勉強以外に取り組んでいることがある高校生が受験しやすいようにしました。</p>
+    <h2 class="text-xl font-bold dark:text-white mt-10 text-center">さいごに</h2>
+    <p class="mb-4 mt-10 text-lg text-gray-900 dark:text-gray-200 text-left">個人的な思いから生まれたサービスを長期インターン先の株式会社ノックラーンにて、リリースできたことは、自分にとって良い経験になったと思っています。開発にあたって、社内メンバーにフィードバックをいただいたりと、大変お世話になりました。<br><br>
+    最近、教育も多様化しており様々な学校やサービスが増えていますが、それが知られていないと感じることが多いです。今後このサービスはもちろん、それ以外でも、世の中にある情報を可視化することで、知られないままになってしまうことを減らしていくために取り組んでいければと思っています。
+    </p>
+</body>
+</html>

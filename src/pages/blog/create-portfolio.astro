@@ -1,0 +1,46 @@
+---
+import Header from '../../Layouts/Header.astro';
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>ポートフォリオサイトを作成しました｜iuto.work</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon.ico">
+  <link href="/dist/output.css" rel="stylesheet">
+  <meta property="og:title" content="ポートフォリオサイトを作成しました｜iuto.work">
+  <meta property="og:image" content="https://www.iuto.work/images/ogp.webp" />
+</head>
+<body class="justify-center 2xl:w-1/2 sm:w-5/6 mx-auto mb-20 dark:bg-gray-800 p-4">
+    <Header active="blog" />
+
+    <div class="flex flex-col items-center mx-auto max-w-2xl dark:text-gray-200 md:max-w-full">
+        <div class="mt-10 inline-flex items-center justify-center flex-shrink-0 h-20 w-20 text-blue-500" style="font-size: 2em;">
+            <img src="/images/pc.webp">
+        </div>
+        <div class="flex flex-col mt-10 items-center">
+            <h2 class="text-2xl font-bold dark:text-white self-stretch">ポートフォリオサイトを作成しました</h2>
+            <time class="mt-2 text-gray-500 flex justify-center items-center">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="mr-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path>
+                </svg>
+                2023.09.11
+            </time>
+        </div>
+    </div>  
+
+    <p class="mb-4 mt-10 text-lg text-gray-900 dark:text-gray-200 text-left">自分のことについてまとめたサイトがほしいと思い、Tailwind CSSのコンポーネント「Flowbite」を組み合わせ、このサイトを作成しました。</p>
+    <h2 class="text-xl font-bold dark:text-white mt-10 text-center">Aboutページ</h2>
+    <p class="mb-4 mt-10 text-lg text-gray-900 dark:text-gray-200 text-left">普段使用しているアイコンを目立つように配置し、その下に簡単な自己紹介を掲載しました。特に気に入っているのは、WEB上の通知として用いられる「Toasts」の✕ボタンをなくし、箇条書き形式で自分の属性を表したことです。</p>
+    <img src="/images/01-01.webp" alt="screenshots01" class="shadow-md rounded-lg">
+    <p class="mb-4 mt-10 text-lg text-gray-900 dark:text-gray-200 text-left">また「16Personalities」の結果を参照し、外向型/内向型・直感型/現実型・論理型/道理型・計画型/探索型・自己主張型/慎重型を表し、自分の性格について可視化させました。</p>
+    <img src="/images/01-02.webp" alt="screenshots02" class="shadow-md rounded-lg">
+    <p class="mb-4 mt-10 text-lg text-gray-900 dark:text-gray-200 text-left">これまでの経歴を表しました。今後、もう少し詳しく掲載できればと思っています。</p>
+    <img src="/images/01-03.webp" alt="screenshots03" class="shadow-md rounded-lg">
+    <h2 class="text-xl font-bold dark:text-white mt-10 text-center">Blogページ</h2>
+    <p class="mb-4 mt-10 text-lg text-gray-900 dark:text-gray-200 text-left">このブログ機能を追加しました。今後、更新していきたいと思っています。</p>
+    <img src="/images/01-04.webp" alt="screenshots04" class="shadow-md rounded-lg">
+</body>
+</html>
