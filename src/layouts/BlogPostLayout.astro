@@ -13,7 +13,7 @@ import '../styles/global.css'; // このパスが正しいか確認してくだ�
 const allPosts = await Astro.glob('../pages/posts/*.md'); // パスがプロジェクト構造に合っているか確認してください
 
 // 投稿の pubDate をフォーマットする関数
-function formatPubDate(date) {
+function formatPubDate(date: string) {
   return format(new Date(date), 'yyyy-MM-dd');
 }
 

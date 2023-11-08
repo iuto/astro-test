@@ -19,6 +19,8 @@ const formattedPosts = allPosts.map(post => ({
   ...post,
   frontmatter: {
     ...post.frontmatter,
+    title: post.frontmatter.title || 'No title', // titleが存在しない場合は 'No title' を使用
+    image: post.frontmatter.image || '/path/to/default/image.jpg', // imageが存在しない場合はデフォルトの画像を使用
     pubDate: formatPubDate(post.frontmatter.pubDate)
   }
 }));
