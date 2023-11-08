@@ -9,7 +9,7 @@ const { link, imageUrl, title, description, category, categoryImage, categoryLab
       <div class="px-6 py-4 rounded-lg">
           <div class="font-bold text-xl mb-2">{title}</div>
             <!-- set:htmlディレクティブを使用してdescriptionをレンダリング -->
-            <p class="text-gray-700 text-base" set:html={description}></p>
+            <p class="text-gray-700 text-base dark:text-white" set:html={description}></p>
       </div>
       <div class="px-6 pb-2">
           <div class="flex justify-center items-center text-gray-900 bg-white border border-gray-300 focus:outline-none font-medium rounded-lg text-sm px-3 py-1 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600">

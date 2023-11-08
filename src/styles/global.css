@@ -1,0 +1,33 @@
+h2 {
+    font-size: 1.25rem;
+    line-height: 1.75rem; /* 28px */
+    font-weight: bold;
+    margin-top: 2.5rem; /* 40px */
+    text-align: center;
+}
+
+/* styles.global.css に追加 */
+img {
+    margin-top: 1rem;
+    border-radius: 0.5rem; /* 角を丸くする */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* 影を付ける */
+    /* 他に必要なスタイルがあればここに追加 */
+}
+
+p {
+    margin-bottom: 1rem; /* mb-4 */
+    margin-top: 2.5rem; /* mt-10 */
+    font-size: 1.125rem; /* text-lg */
+    color: #1a202c; /* text-gray-900 */
+    text-align: left; /* text-left */
+}
+
+@media (prefers-color-scheme: dark) {
+    p {
+        color: #e5e7eb; /* dark:text-gray-200 */
+    }
+
+    h2 {
+        color: #e5e7eb; /* dark:text-gray-200 */
+    }
+}

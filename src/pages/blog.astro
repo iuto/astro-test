@@ -1,50 +1,66 @@
 ---
+// .astro ファイルの最初にメタデータとスクリプトを置きます
+import { format } from 'date-fns';
 import Header from '../layouts/Header.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostListItem from '../components/PostListItem.astro';
+import '../styles/global.css';
+
+// すでに allPosts を宣言しているので、この行は削除します。
+// const allPosts = await Astro.glob('../pages/posts/*.md');
+
+const allPosts = await Astro.glob('../pages/posts/*.md');
+
+// 投稿の pubDate をフォーマットする関数
+function formatPubDate(date) {
+  return format(new Date(date), 'yyyy-MM-dd');
+}
+
+// allPosts の各記事に対してフォーマットを適用します
+const formattedPosts = allPosts.map(post => ({
+  ...post,
+  frontmatter: {
+    ...post.frontmatter,
+    pubDate: formatPubDate(post.frontmatter.pubDate)
+  }
+}));
+
+// 日付で降順にソート
+formattedPosts.sort((a, b) => new Date(b.frontmatter.pubDate) - new Date(a.frontmatter.pubDate));
 ---
 
 <!DOCTYPE html>
-<html>
-<head>
-  <title>iuto.work</title>
-  <html lang="ja">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="images/favicon.ico">
-  <link href="/dist/output.css" rel="stylesheet">
-  <meta name="description" content="いうとのポートフォリオサイトです。">
-  <meta property="og:image" content="https://www.iuto.work/images/ogp.webp" />
-</head>
+<html lang="ja">
+  <head>
+    <title>iuto.work</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/favicon.ico">
+    <meta name="description" content="いうとのポートフォリオサイトです。">
+    <meta property="og:image" content="https://www.iuto.work/images/ogp.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
+  </head>
 <body class="justify-center 2xl:w-1/2 sm:w-5/6 mx-auto mb-20 dark:bg-gray-800 p-4">
-
     <Header active="blog" />
 
-    <div class="mt-10 flex flex-col items-center mx-auto max-w-2xl dark:text-gray-200">
-        <a href="/blog/future-school" class="block w-full flex flex-col items-center">
-            <div id="toast-default" class="mt-5 flex items-center w-full max-w-xl p-6 text-gray-500 bg-white rounded-lg shadow-md rounded-lg dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700" role="alert">
-                <div class="inline-flex items-center justify-center flex-shrink-0 w-10 h-10 text-blue-500 rounded-lg">
-                    <img src="/images/school.webp">
-                </div>
-                <div class="ml-3 font-bold text-base dark:text-gray-200">今後の学校教育について<br><span class="font-normal text-sm">2023.10.21</span></div>
+    <ul class="mt-10">
+      {formattedPosts.map(post => (
+        <li key={post.url}>
+          <a href={post.url} class="block w-full flex flex-col items-center">
+            <div class="mt-5 flex items-center w-full max-w-xl p-6 text-gray-500 bg-white rounded-lg shadow-md dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700">
+              <img src={post.frontmatter.image} class="w-10 h-10 text-blue-500 rounded-none shadow-none" alt="Post Image" />
+              <div class="ml-3">
+                <div class="font-bold text-base dark:text-gray-200">{post.frontmatter.title}</div>
+                <div class="font-normal text-sm dark:text-gray-200">{post.frontmatter.pubDate}</div>
+              </div>
             </div>
-        </a>
-        <a href="/blog/sogogata-navi" class="block w-full flex flex-col items-center">
-            <div id="toast-default" class="mt-5 flex items-center w-full max-w-xl p-6 text-gray-500 bg-white rounded-lg shadow-md rounded-lg dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700" role="alert">
-                <div class="inline-flex items-center justify-center flex-shrink-0 w-10 h-10 text-blue-500 rounded-lg">
-                    <img src="/images/search.webp">
-                </div>
-                <div class="ml-3 font-bold text-base dark:text-gray-200">総合型選抜ナビをリリースしました<br><span class="font-normal text-sm">2023.09.21</span></div>
-            </div>
-        </a>
-        <a href="/blog/create-portfolio" class="block w-full flex flex-col items-center">
-            <div id="toast-default" class="mt-5 flex items-center w-full max-w-xl p-6 text-gray-500 bg-white rounded-lg shadow-md rounded-lg dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700" role="alert">
-                <div class="inline-flex items-center justify-center flex-shrink-0 w-10 h-10 text-blue-500 rounded-lg">
-                    <img src="/images/pc.webp">
-                </div>
-                <div class="ml-3 font-bold text-base dark:text-gray-200">ポートフォリオサイトを作成しました<br><span class="font-normal text-sm">2023.09.11</span></div>
-            </div>
-        </a>
-    </div>
-    
-      
+          </a>
+        </li>
+      ))}
+    </ul>
+
+
 </body>
 </html>
