@@ -54,6 +54,8 @@ const formattedPosts = allPosts.map(post => ({
                 {formatPubDate(pubDate)}
             </time>
         </div>
+        <article class="mt-10 prose lg:prose-lg">
+            <slot />
+          </article>
     </div>
-    <slot />
   </body>
