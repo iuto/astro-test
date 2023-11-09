@@ -1,23 +1,17 @@
 ---
-// 必要なプロパティを Astro.props から取り出します。
 const { frontmatter } = Astro.props;
 const { title, pubDate, image, tags } = frontmatter;
 
-// .astro ファイルの最初にメタデータとスクリプトを置きます
 import { format } from 'date-fns';
-import Header from './Header.astro'; // このパスが正しいか確認してください
-import '../styles/global.css'; // このパスが正しいか確認してください
+import Header from './Header.astro';
+import '../styles/global.css'; 
 
-// const allPosts = await Astro.glob('../pages/posts/*.md'); // この行は削除されています
+const allPosts = await Astro.glob('../pages/posts/*.md');
 
-const allPosts = await Astro.glob('../pages/posts/*.md'); // パスがプロジェクト構造に合っているか確認してください
-
-// 投稿の pubDate をフォーマットする関数
 function formatPubDate(date: string) {
   return format(new Date(date), 'yyyy-MM-dd');
 }
 
-// allPosts の各記事に対してフォーマットを適用します
 const formattedPosts = allPosts.map(post => ({
   ...post,
   frontmatter: {
@@ -27,7 +21,7 @@ const formattedPosts = allPosts.map(post => ({
 }));
 ---
 
-<link href="/styles/global.css" rel="stylesheet"> <!-- パスが正しいか確認してください -->
+<link href="/styles/global.css" rel="stylesheet">
 
 <head>
     <title>{title}｜iuto.work</title>
