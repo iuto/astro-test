@@ -41,7 +41,7 @@ const ArticleList = ({ initialArticles }) => {
             <a href={article.link} target="_blank" rel="noopener noreferrer">
               <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white">{article.title}</h3>
               <div className="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-200">
-                <time>{article.date}</time>・<span>{article.category}</span>
+                <time>{article.date}</time> ・ <span>{article.category}</span>
               </div>
             </a>
           </div>

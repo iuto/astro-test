@@ -7,7 +7,8 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "update-rss": "node ./src/rss/rss-parser.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.1",
@@ -17,6 +18,7 @@
     "astro": "^3.4.3",
     "date-fns": "^2.30.0",
     "postcss-nesting": "^12.0.1",
+    "rss-parser": "^3.13.0",
     "tailwindcss": "^3.3.5",
     "typescript": "^5.2.2"
   },
