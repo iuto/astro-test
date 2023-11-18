@@ -1,0 +1,29 @@
+---
+import Header from '../layouts/Header.astro';
+import articles from '../rss/articles.json';
+import ArticleAll from '../components/ArticleAll.jsx';
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>iuto.work</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon.ico">
+  <meta name="description" content="いうとのポートフォリオサイトです。">
+  <meta property="og:image" content="https://www.iuto.work/images/ogp.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
+</head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z5S7NX0CXN"></script>
+
+<body class="justify-center 2xl:w-1/2 sm:w-5/6 mx-auto mb-20 dark:bg-gray-800 p-4">
+
+	<Header active="about" />
+    <ArticleAll initialArticles={articles} />
+
+</body>
+</html>
