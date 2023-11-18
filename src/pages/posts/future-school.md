@@ -3,7 +3,7 @@ layout: ../../layouts/BlogPostLayout.astro
 title: '今後の学校教育について'
 pubDate: 2023-10-21
 image: '/images/school.webp'
-tags: ["教育"]
+tags: ["考えたこと"]
 ---
 
 友人の[**Yuta Kobayashi**](https://yutakobayashi.dev/)さんが先日公開した「[**今の教育と未来**](https://yutakobayashi.dev/blog/learning-over-education)」という記事に影響され、最近考えている今後の学校教育についてまとめようと思います。

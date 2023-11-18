@@ -28,6 +28,21 @@ const formattedPosts = allPosts.map(post => ({
 // 日付で降順にソート
 formattedPosts.sort((a, b) => new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime());
 
+// ユニークなタグのリストを作成
+const tags = Array.from(new Set(allPosts.flatMap(post => post.frontmatter.tags)));
+
+// カテゴリー（タグ）選択状態を管理する変数
+let selectedTag = 'すべて';
+
+// 選択されたカテゴリーに基づいてフィルタリングされた投稿
+const filteredPosts = selectedTag === 'すべて' ? formattedPosts : formattedPosts.filter(post => post.frontmatter.tags.includes(selectedTag));
+
+const categoryImages = {
+  "プログラミング": "/images/pc.webp",
+  "考えたこと": "/images/balloon.webp",
+  "プライベート": "/images/smiling.webp",
+};
+
 ---
 
 <!DOCTYPE html>
@@ -46,9 +61,20 @@ formattedPosts.sort((a, b) => new Date(b.frontmatter.pubDate).getTime() - new Da
 <body class="justify-center 2xl:w-1/2 sm:w-5/6 mx-auto mb-20 dark:bg-gray-800 p-4">
     <Header active="blog" />
 
-    <ul class="mt-10">
+    <div class="flex flex-wrap justify-center mt-5">
+      <button class="category-button flex items-center justify-center w-14 h-14 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-0 font-medium rounded-lg text-sm p-2 mb-2 mr-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" data-category="すべて" onClick={() => updatePostsDisplay('すべて')}>
+        <img src="/images/all.webp" alt="すべて" class="m-auto shadow-none" />
+      </button>
+      {tags.map(tag => (
+        <button class="category-button flex items-center justify-center w-14 h-14 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-0 font-medium rounded-lg text-sm p-2 mb-2 mr-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" data-category={tag} onClick={() => updatePostsDisplay(tag)}>
+          <img src={categoryImages[tag]} alt={tag} class="m-auto shadow-none" />
+        </button>
+      ))}
+    </div>
+    
+    <ul>
       {formattedPosts.map(post => (
-        <li>
+        <li class="post" data-tags={post.frontmatter.tags.join(',')}>
           <a href={post.url} class="block w-full flex flex-col items-center">
             <div class="mt-5 flex items-center w-full max-w-xl p-6 text-gray-500 bg-white rounded-lg shadow-md dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700">
               <img src={post.frontmatter.image} class="w-10 h-10 text-blue-500 rounded-none shadow-none" alt="Post Image" />
@@ -61,7 +87,30 @@ formattedPosts.sort((a, b) => new Date(b.frontmatter.pubDate).getTime() - new Da
         </li>
       ))}
     </ul>
+        
+    <script>
+      function updatePostsDisplay(selectedTag) {
+        const posts = document.querySelectorAll('.post');
+        posts.forEach(post => {
+          const postTags = post.dataset.tags.split(',');
+          if (selectedTag === 'すべて' || postTags.includes(selectedTag)) {
+            post.style.display = '';
+          } else {
+            post.style.display = 'none';
+          }
+        });
+      }
+    
+        document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.category-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const selectedTag = button.getAttribute('data-category');
+        updatePostsDisplay(selectedTag);
+      });
+    });
+  });
 
-
-</body>
+    </script>
+    
+  </body>
 </html>
