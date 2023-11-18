@@ -36,7 +36,7 @@ const ArticleList = ({ initialArticles }) => {
   return (
     <div className="mt-20">
       {articles.slice(0, visibleCount).map((article, index) => (
-        <li key={index} className="mb-5 ml-6 list-none">
+        <li key={index} className="mb-5 list-none">
           <div className="relative p-2 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
             <a href={article.link} target="_blank" rel="noopener noreferrer">
               <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white">{article.title}</h3>
