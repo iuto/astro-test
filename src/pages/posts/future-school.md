@@ -3,6 +3,7 @@ layout: ../../layouts/BlogPostLayout.astro
 title: '今後の学校教育について'
 pubDate: 2023-10-21
 image: '/images/school.webp'
+ogImage: '/images/og/future-school.webp'
 tags: ["考えたこと"]
 ---
 

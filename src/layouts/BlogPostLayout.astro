@@ -1,7 +1,7 @@
 ---
 // 必要なプロパティを Astro.props から取り出します。
 const { frontmatter } = Astro.props;
-const { title, pubDate, image, tags } = frontmatter;
+const { title, pubDate, image, tags, ogImage } = frontmatter;
 
 // .astro ファイルの最初にメタデータとスクリプトを置きます
 import { format } from 'date-fns';
@@ -35,7 +35,7 @@ const formattedPosts = allPosts.map(post => ({
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/images/favicon.ico">
     <meta name="description" content="いうとのポートフォリオサイトです。">
-    <meta property="og:image" content="https://www.iuto.work/images/ogp.webp" />
+    <meta property="og:image" content={`https://www.yourwebsite.com${ogImage}`} />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">

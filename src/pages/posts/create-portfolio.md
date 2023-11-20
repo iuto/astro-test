@@ -3,6 +3,7 @@ layout: ../../layouts/BlogPostLayout.astro
 title: 'ポートフォリオサイトを作成しました'
 pubDate: 2023-09-11
 image: '/images/pc.webp'
+ogImage: '/images/og/create-portfolio.webp'
 tags: ["プログラミング"]
 ---
 

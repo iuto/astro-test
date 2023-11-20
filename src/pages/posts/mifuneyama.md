@@ -3,6 +3,7 @@ layout: ../../layouts/BlogPostLayout.astro
 title: 'かみさまがすまう森に行きました'
 pubDate: 2023-11-17
 image: '/images/forest.webp'
+ogImage: '/images/og/future-school.webp'
 tags: ["プライベート"]
 ---
 
