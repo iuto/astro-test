@@ -30,17 +30,17 @@ const formattedPosts = allPosts.map(post => ({
 <link href="/styles/global.css" rel="stylesheet"> <!-- パスが正しいか確認してください -->
 
 <head>
-    <title>{title}｜iuto.work</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/images/favicon.ico">
-    <meta name="description" content="いうとのポートフォリオサイトです。">
-    <meta property="og:image" content={`https://iuto.work${ogImage}`} />
-    <meta name="twitter:card" content="summary"></meta>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
-  </head>
+  <title>{title}｜iuto.work</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon.ico">
+  <meta name="description" content="いうとのポートフォリオサイトです。">
+  <meta property="og:image" content={`https://iuto.work${ogImage}`} />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content={`{title}｜iuto.work}`}>
+  <meta name="twitter:description" content="{いうとのポートフォリオサイトです。}">
+  <meta name="twitter:image" content={`https://iuto.work${ogImage}`}>
+</head>
 <body class="justify-center 2xl:w-1/2 sm:w-5/6 mx-auto mb-20 dark:bg-gray-800 p-4">
     <Header active="blog" />
     <!-- ここで formatPubDate 関数を使って pubDate をフォーマットします -->
