@@ -41,7 +41,7 @@ const formattedPosts = allPosts.map(post => ({
   <meta name="twitter:description" content="いうとのポートフォリオサイトです。">
   <meta name="twitter:image" content={`https://iuto.work${ogImage}`}>
 </head>
-<body class="justify-center 2xl:w-1/2 sm:w-5/6 mx-auto mb-20 dark:bg-gray-800 p-4">
+<body class="justify-center 2xl:w-1/2 sm:w-5/6 px-10 mx-auto mb-20 dark:bg-gray-800 p-4">
     <Header active="blog" />
     <!-- ここで formatPubDate 関数を使って pubDate をフォーマットします -->
     <div class="flex flex-col items-center mx-auto max-w-2xl dark:text-gray-200 md:max-w-full">
@@ -55,7 +55,7 @@ const formattedPosts = allPosts.map(post => ({
                 {formatPubDate(pubDate)}
             </time>
         </div>
-        <article class="mt-10 prose lg:prose-lg dark:prose-invert">
+        <article class="mt-10 prose prose-lg dark:prose-invert">
             <slot />
           </article>
     </div>
