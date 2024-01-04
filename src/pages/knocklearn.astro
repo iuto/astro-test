@@ -1,6 +1,7 @@
 ---
 import Header from '../layouts/Header.astro';
 import Company from '../components/company.astro';
+import Achievements from '../components/achievements.astro';
 ---
 
 <!DOCTYPE html>
@@ -18,16 +19,20 @@ import Company from '../components/company.astro';
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
 </head>
-
 <body class="justify-center 2xl:w-1/2 sm:w-5/6 mx-auto mb-20 dark:bg-gray-800 p-4">
     <Header active="about" />
 
     <Company
     company="株式会社ノックラーン"
-    description=""
-    business1=""
-    business2=""
-    business3=""
+    description="株式会社ノックラーンでは、中高生に向けたキャリア教育サービス「KnockLearn」「KnockLearn DIVE」などを運営しています。"
     link="https://corporate.knocklearn.com/"
     />
+
+    <Achievements
+    dynamicImage="https://ao-navi.knocklearn.com/"
+    alt="総合型選抜ナビ"
+    description="総合型選抜ナビの開発・運営に携わっています。"
+    />
+
 </body>
+</html>
