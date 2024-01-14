@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: 'このサイトをAstroに移行しました'
 pubDate: 2023-11-13
-image: '/images/right.webp'
+image: '/images/icon/right.webp'
 ogImage: '/images/og/astro.webp'
 tags: ["プログラミング"]
 ---

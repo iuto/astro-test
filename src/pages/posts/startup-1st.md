@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: '会社を設立してから1年経過して思ったこと'
 pubDate: 2023-11-21
-image: '/images/1.webp'
+image: '/images/icon/1.webp'
 ogImage: '/images/og/astro.webp'
 tags: ["仕事"]
 ---

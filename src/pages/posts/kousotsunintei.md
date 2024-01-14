@@ -2,9 +2,9 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: '高卒認定に合格しました'
 pubDate: 2023-12-6
-image: '/images/goukaku.webp'
+image: '/images/icon/goukaku.webp'
 ogImage: '/images/og/kousotsunintei.webp'
-tags: ["プライベート"]
+tags: ["日常"]
 ---
 
 高卒認定（高等学校卒業程度認定試験）に合格しました。高卒認定とは、高等学校を卒業した者と同等以上の学力があるかどうかを認定するための資格のことです。

@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: '総合型選抜ナビをリリースしました'
 pubDate: 2023-09-21
-image: '/images/search.webp'
+image: '/images/icon/search.webp'
 ogImage: '/images/og/sogogata-navi.webp'
 tags: ["プログラミング"]
 ---

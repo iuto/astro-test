@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: '通信制高校に在学し、フルリモート企業で働くということ'
 pubDate: 2023-12-2
-image: '/images/house.webp'
+image: '/images/icon/house.webp'
 ogImage: '/images/og/remote-1y.webp'
 tags: ["仕事"]
 ---

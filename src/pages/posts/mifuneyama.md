@@ -2,9 +2,9 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: 'かみさまがすまう森に行きました'
 pubDate: 2023-11-17
-image: '/images/forest.webp'
+image: '/images/icon/forest.webp'
 ogImage: '/images/og/future-school.webp'
-tags: ["プライベート"]
+tags: ["日常"]
 ---
 
 11月上旬、佐賀県の御船山楽園で開催されたチームラボの夜の森のミュージアム「[かみさまがすまう森](https://www.teamlab.art/jp/e/mifuneyamarakuen/)」に行ってきました。同日の昼には「[チームラボフォレスト 福岡](https://www.teamlab.art/jp/e/forest/)」も訪れましたが、どちらもよかったです。

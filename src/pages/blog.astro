@@ -39,17 +39,17 @@ let selectedTag = 'すべて';
 const filteredPosts = selectedTag === 'すべて' ? formattedPosts : formattedPosts.filter(post => post.frontmatter.tags.includes(selectedTag));
 
 const categoryImages: Record<string, string> = {
-  "プログラミング": "/images/pc.webp",
-  "仕事": "/images/office.webp",
-  "考えたこと": "/images/balloon.webp",
-  "プライベート": "/images/smiling.webp",
+  "プログラミング": "/images/icon/pc.webp",
+  "仕事": "/images/icon/office.webp",
+  "考えたこと": "/images/icon/balloon.webp",
+  "日常": "/images/icon/smiling.webp",
 };
 
 // ユニークなタグのリストを作成
 const uniqueTags = Array.from(new Set(allPosts.flatMap(post => post.frontmatter.tags)));
 
 // カテゴリー順序を定義
-const categoryOrder = ['プログラミング', '仕事', '考えたこと', 'プライベート', 'その他'];
+const categoryOrder = ['プログラミング', '仕事', '考えたこと', '日常', 'その他'];
 
 // タグをカテゴリー順序に基づいて並べる
 const sortedTags = categoryOrder.filter(tag => uniqueTags.includes(tag));
@@ -74,7 +74,7 @@ const sortedTags = categoryOrder.filter(tag => uniqueTags.includes(tag));
 
     <div class="flex flex-wrap justify-center mt-5">
       <button class="category-button flex items-center justify-center w-14 h-14 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-0 font-medium rounded-lg text-sm p-2 mb-2 mr-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" data-category="すべて">
-        <img src="/images/all.webp" alt="すべて" class="m-auto shadow-none" />
+        <img src="/images/icon/all.webp" alt="すべて" class="m-auto shadow-none" />
       </button>
       {sortedTags.map(tag => (
         <button class="category-button flex items-center justify-center w-14 h-14 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-0 font-medium rounded-lg text-sm p-2 mb-2 mr-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" data-category={tag}>
