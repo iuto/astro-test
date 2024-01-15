@@ -3,7 +3,7 @@ layout: ../../layouts/BlogPostLayout.astro
 title: 'キャリア教育の不足を痛感する'
 pubDate: 2024-01-15
 image: '/images/icon/roadbed.webp'
-ogImage: '/images/og/2023.webp'
+ogImage: '/images/og/career-education.webp'
 tags: ["考えたこと"]
 ---
 

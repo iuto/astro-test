@@ -36,8 +36,9 @@ const formattedPosts = allPosts.map(post => ({
   <link rel="icon" href="/images/favicon.ico">
   <meta name="description" content="いうとのポートフォリオサイトです。">
   <meta property="og:image" content={`https://iuto.work${ogImage}`} />
+  <meta property="og:title" content={title} />
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="iuto.work">
+  <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content="いうとのポートフォリオサイトです。">
   <meta name="twitter:image" content={`https://iuto.work${ogImage}`}>
 </head>
