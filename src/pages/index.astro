@@ -2,6 +2,7 @@
 import Header from '../layouts/Header.astro';
 import Toast from '../components/toast.astro';
 import SNSButton from '../components/sns-button.astro';
+import TimeLine from '../components/timeline.astro';
 import './src/styles/global.css';
 ---
 
@@ -74,71 +75,40 @@ import './src/styles/global.css';
     />
   </div>
 
-    <ol class="mt-20 relative border-l border-gray-200 dark:border-gray-700 mx-10">                  
-      <li class="mb-10 ml-6">            
-          <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-800 dark:bg-blue-900">
-            <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M19.728 10.686c-2.38 2.256-6.153 3.381-9.875 3.381-3.722 0-7.4-1.126-9.571-3.371L0 10.437V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-7.6l-.272.286Z"/>
-              <path d="m.135 7.847 1.542 1.417c3.6 3.712 12.747 3.7 16.635.01L19.605 7.9A.98.98 0 0 1 20 7.652V6a2 2 0 0 0-2-2h-3V3a3 3 0 0 0-3-3H8a3 3 0 0 0-3 3v1H2a2 2 0 0 0-2 2v1.765c.047.024.092.051.135.082ZM10 10.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5ZM7 3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1H7V3Z"/>
-              </svg>
-          </span>
-          <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white sm:text-xl">
-            <a href="https://www.moved.co.jp/" target="_blank" class="mr-2 hover:text-gray-500">株式会社MOVED</a><span>ライター</span>
-          </h3> 
-          <time class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-200 sm:text-base">2023年1月-</time>
-          <p class="mb-4 text-base font-normal text-gray-900 dark:text-gray-200 sm:text-base">パブリックリレーション事業部にて、会社のお知らせ記事の執筆などを行っています。</p>
-
-      </li>
-      <li class="mb-10 ml-6">
-          <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-800 dark:bg-blue-900">
-              <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M19.728 10.686c-2.38 2.256-6.153 3.381-9.875 3.381-3.722 0-7.4-1.126-9.571-3.371L0 10.437V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-7.6l-.272.286Z"/>
-                <path d="m.135 7.847 1.542 1.417c3.6 3.712 12.747 3.7 16.635.01L19.605 7.9A.98.98 0 0 1 20 7.652V6a2 2 0 0 0-2-2h-3V3a3 3 0 0 0-3-3H8a3 3 0 0 0-3 3v1H2a2 2 0 0 0-2 2v1.765c.047.024.092.051.135.082ZM10 10.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5ZM7 3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1H7V3Z"/>
-                </svg>
-          </span>
-          <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
-            <a href="https://corporate.knocklearn.com/" target="_blank" class="mr-2 hover:text-gray-500">株式会社ノックラーン</a>長期インターン
-          </h3>
-          <time class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-200">2023年1月-</time>
-          <p class="text-base font-normal text-gray-900 dark:text-gray-200">オープンポジションとして、記事制作やSNS運用、新規事業開発などを行っています。</p>
-      </li>
-      <li class="mb-10 ml-6">
-        <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-800 dark:bg-blue-900">
-          <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M19.728 10.686c-2.38 2.256-6.153 3.381-9.875 3.381-3.722 0-7.4-1.126-9.571-3.371L0 10.437V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-7.6l-.272.286Z"/>
-            <path d="m.135 7.847 1.542 1.417c3.6 3.712 12.747 3.7 16.635.01L19.605 7.9A.98.98 0 0 1 20 7.652V6a2 2 0 0 0-2-2h-3V3a3 3 0 0 0-3-3H8a3 3 0 0 0-3 3v1H2a2 2 0 0 0-2 2v1.765c.047.024.092.051.135.082ZM10 10.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5ZM7 3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1H7V3Z"/>
-            </svg>
-        </span>
-        <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
-          <a href="https://kabin.life/" target="_blank" class="mr-2 hover:text-gray-500">感覚過敏研究所</a>長期インターン
-        </h3>
-        <time class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-200">2022年12月-</time>
-        <p class="text-base font-normal text-gray-900 dark:text-gray-200">記事制作やSNS運用などの広報を担っています。</p>
-    </li>
-    <li class="mb-10 ml-6">
-      <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-800 dark:bg-blue-900">
-        <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M19.728 10.686c-2.38 2.256-6.153 3.381-9.875 3.381-3.722 0-7.4-1.126-9.571-3.371L0 10.437V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-7.6l-.272.286Z"/>
-          <path d="m.135 7.847 1.542 1.417c3.6 3.712 12.747 3.7 16.635.01L19.605 7.9A.98.98 0 0 1 20 7.652V6a2 2 0 0 0-2-2h-3V3a3 3 0 0 0-3-3H8a3 3 0 0 0-3 3v1H2a2 2 0 0 0-2 2v1.765c.047.024.092.051.135.082ZM10 10.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5ZM7 3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1H7V3Z"/>
-          </svg>
-      </span>
-      <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
-        <a href="https://henkan.llc/" target="_blank" class="mr-2 hover:text-gray-500">合同会社HENKAN</a>代表
-      </h3>
-      <time class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-200">2022年11月-</time>
-      <p class="text-base font-normal text-gray-900 dark:text-gray-200">早いうちから会社を経営した経験は今後の財産になり、事業の成功/失敗に問わず学べることがあるのだと考えています。個人事業主として行っていたWEBライティングで得たお金を使い、法人登記しました。最近は自分自身のスキルアップのために、会社の事業よりも、他3社の業務に携わることに時間を割いています。</p>
-    </li>
-      <li class="ml-6">
-          <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-800 dark:bg-blue-900">
-            <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M19.728 10.686c-2.38 2.256-6.153 3.381-9.875 3.381-3.722 0-7.4-1.126-9.571-3.371L0 10.437V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-7.6l-.272.286Z"/>
-              <path d="m.135 7.847 1.542 1.417c3.6 3.712 12.747 3.7 16.635.01L19.605 7.9A.98.98 0 0 1 20 7.652V6a2 2 0 0 0-2-2h-3V3a3 3 0 0 0-3-3H8a3 3 0 0 0-3 3v1H2a2 2 0 0 0-2 2v1.765c.047.024.092.051.135.082ZM10 10.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5ZM7 3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1H7V3Z"/>
-              </svg>
-          </span>
-          <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">個人事業主</h3>
-          <time class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-200">2020年11月-</time>
-          <p class="text-base font-normal text-gray-900 dark:text-gray-200">「ココナラ」というクラウドソーシングサービスで、WEBライターとしてゲームの紹介記事やYouTube動画の原稿などを執筆していました。現在は積極的に取り組んでいませんが、過去に依頼を受けた方からの新しい依頼には引き続き対応しています。</p>
-      </li>
+    <ol class="mt-20 relative border-l border-gray-200 dark:border-gray-700 mx-10">
+        <TimeLine
+        link="https://www.moved.co.jp/"
+        company="株式会社MOVED"
+        job="ライター"
+        day="2023年1月"
+        description="パブリックリレーション事業部にて、会社のお知らせ記事の執筆などを行っています。"
+        />
+        <TimeLine
+        link="https://corporate.knocklearn.com/"
+        company="株式会社ノックラーン"
+        job="長期インターン"
+        day="2023年1月"
+        description="オープンポジションとして、記事制作やSNS運用、新規事業開発などを行っています。"
+        />
+        <TimeLine
+        link="https://kabin.life/"
+        company="感覚過敏研究所"
+        job="長期インターン"
+        day="2022年12月"
+        description="記事制作やSNS運用などの広報を担っています。"
+        />
+        <TimeLine
+        link="https://henkan.llc/"
+        company="合同会社HENKAN"
+        job="代表"
+        day="2022年11月"
+        description="早いうちから会社を経営した経験は今後の財産になり、事業の成功/失敗に問わず学べることがあるのだと考えています。個人事業主として行っていたWEBライティングで得たお金を使い、法人登記しました。最近は自分自身のスキルアップのために、会社の事業よりも、他3社の業務に携わることに時間を割いています。"
+        />
+        <TimeLine
+        company="個人事業主"
+        day="2020年11月"
+        description="「ココナラ」というクラウドソーシングサービスで、WEBライターとしてゲームの紹介記事やYouTube動画の原稿などを執筆していました。現在は積極的に取り組んでいませんが、過去に依頼を受けた方からの新しい依頼には引き続き対応しています。"
+        />
     </ol>
 </body>
 </html>
