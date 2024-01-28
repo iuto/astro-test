@@ -1,0 +1,73 @@
+---
+import Header from '../layouts/Header.astro';
+import Book from '../components/book.astro';
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>iuto.work</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon.ico">
+  <meta name="description" content="いうとのポートフォリオサイトです。">
+  <meta property="og:image" content="https://www.iuto.work/images/ogp.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
+</head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z5S7NX0CXN"></script>
+
+  <style>
+    .instagram-gradient {
+      background-image: linear-gradient(45deg, #FFDC80, #FCAF45, #F77737, #F56040, #FD1D1D, #E1306C, #C13584, #833AB4, #5851DB, #405DE6);
+    }
+
+    .instagram-gradient:hover {
+      opacity: 0.9;
+    }
+
+    /* アニメーションの定義 */
+    @keyframes scaleUpAndDown {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* img要素にアニメーションを適用 */
+    .icon {
+      animation: scaleUpAndDown 0.3s ease-in-out;
+    }
+
+  </style>
+
+<body class="justify-center 2xl:w-1/2 sm:w-5/6 mx-auto mb-20 dark:bg-gray-800 p-4">
+
+	<Header active="about" />
+
+    <div class="mt-10 gap-10 grid grid-cols-2 md:grid-cols-3">
+        <Book
+          url="https://m.media-amazon.com/images/I/91iE3Cp0xXL._SY466_.jpg"
+          alt="人類を前に進めたい チームラボと境界のない世界"
+        />
+        <Book
+          url="https://m.media-amazon.com/images/I/51hYJe5toYL._SY466_.jpg"
+          alt="teamLab 永遠の今の中で"
+        />
+        <Book
+          url="https://m.media-amazon.com/images/I/91HXUXh3DIL._SY466_.jpg"
+          alt="団地図解: 地形・造成・ランドスケープ・住棟・間取りから読み解く設計思考"
+        />
+        <Book
+        url="https://m.media-amazon.com/images/I/91LoFi0PmsL._SY466_.jpg"
+        alt="スターハウス　戦後昭和の団地遺産"
+      />
+      </div>    
+  
