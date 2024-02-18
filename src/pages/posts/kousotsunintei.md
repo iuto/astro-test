@@ -41,3 +41,6 @@ tags: ["日常"]
 高卒認定に合格することで、18歳になる年に大学受験をする資格が得られますが、高校を卒業しないと高卒にはなりません。これからも高校に在学し、卒業を目指す予定です。
 
 また高卒認定で合格した科目の一部を、在学中の通信制高校で認めてもらうよう話を進めているので、履修する科目が少し減るといいなと思っています。
+
+追記（2024/02/18）：
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">高卒認定に合格したことで、2年次以降の履修科目が減ることになりました！<br><br>政治・経済・倫理・生物基礎・化学基礎・日本史Bが免除される予定です。国語や英語などの3年間履修する科目は免除されないみたいです。<br><br>通信制高校に在学する高校生が、高卒認定を取っておくのは個人的にオススメです👍 <a href="https://t.co/FSYVaSVcVO">https://t.co/FSYVaSVcVO</a></p>&mdash; いうと✒ (@iuto_025) <a href="https://twitter.com/iuto_025/status/1759071967641260497?ref_src=twsrc%5Etfw">February 18, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
